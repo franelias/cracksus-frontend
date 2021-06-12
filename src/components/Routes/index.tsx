@@ -5,9 +5,7 @@ import Principal from "../Principal";
 const Routes = () => {
   return (
     <Switch>
-      <Route path="/">
-        <Principal />
-      </Route>
+      <Route exact path="/" component={Principal} />
     </Switch>
   );
 };

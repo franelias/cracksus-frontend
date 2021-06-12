@@ -3,7 +3,7 @@ import { API } from "../api/api";
 import useSWR from "swr";
 
 const fetcher = async () => {
-  const { data } = await API.get("");
+  const { data } = await API.get("asd");
 
   return data;
 };

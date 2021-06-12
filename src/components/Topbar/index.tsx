@@ -1,9 +1,12 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Button } from "@material-ui/core";
+import { useHistory } from "react-router-dom";
 
 import "./styles.scss";
 
 const Topbar = () => {
+  const history = useHistory();
+
   const links = [
     { title: "Home", path: "/home" },
     { title: "Games", path: "/games" },
@@ -13,9 +16,12 @@ const Topbar = () => {
     <div className="topbar__principal">
       {links.map((value) => {
         return (
-          <Link className="topbar__item" to={value.path}>
+          <Button
+            className="topbar__item"
+            onClick={() => history.push(value.path)}
+          >
             {value.title}
-          </Link>
+          </Button>
         );
       })}
     </div>
